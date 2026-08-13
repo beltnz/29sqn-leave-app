@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import FeedbackModal from "@/components/FeedbackModal";
+import { APP_VERSION } from "@/lib/config";
 
 export default function Footer({ ranks }: { ranks?: string[] }) {
   const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
@@ -19,6 +20,8 @@ export default function Footer({ ranks }: { ranks?: string[] }) {
           >
             Feedback
           </button>
+          <span>&bull;</span>
+          <span>ver {APP_VERSION}</span>
         </div>
       </footer>
 
