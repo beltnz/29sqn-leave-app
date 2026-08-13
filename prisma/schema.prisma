@@ -17,7 +17,7 @@ model Member {
   surname    String
   email      String   @unique
   /// @encrypted
-  password   String   @default("admin")
+  password   String   @default("29sqn1941")
   isStaff    Boolean  @default(false)
   isAdjutant Boolean  @default(true)
   isManager  Boolean  @default(true)

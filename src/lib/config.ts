@@ -10,7 +10,7 @@ export type AppStatus = "DEVELOPING" | "TESTING" | "LIVE";
 
 export const APP_STATUS: AppStatus = "DEVELOPING";
 
-export const APP_VERSION = "0.01.0000";
+export const APP_VERSION = "0.01.0001";
 
 export function isDbResetAllowed(): boolean {
   return APP_STATUS === "DEVELOPING";

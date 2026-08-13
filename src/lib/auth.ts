@@ -11,7 +11,7 @@ export function verifyPassword(password: string, hash: string): boolean {
 
 /**
  * Ensures at least one admin exists in the database.
- * If no admin exists, creates the default admin FLTLT Belt with password 'admin'.
+ * If no admin exists, creates the default admin FLTLT Belt with password '29sqn1941'.
  */
 export async function ensureDefaultAdminExists() {
   try {
@@ -25,7 +25,7 @@ export async function ensureDefaultAdminExists() {
           rank: "FLTLT",
           surname: "Belt",
           email: "peter.belt@cadetforces.org.nz",
-          password: hashPassword("admin"),
+          password: hashPassword("29sqn1941"),
           isAdjutant: true,
           isManager: true,
           isAdmin: true,

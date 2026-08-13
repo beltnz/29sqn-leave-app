@@ -57,7 +57,7 @@ export function AddMemberForm({ ranks = DEFAULT_RANKS }: { ranks?: string[] }) {
   const [rank, setRank] = useState<string>(ranksList[0] || "FLTLT");
   const [surname, setSurname] = useState("");
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("admin");
+  const [password, setPassword] = useState("29sqn1941");
   const [role, setRole] = useState<string>("Adjutant");
   const [isPending, startTransition] = useTransition();
   const [msg, setMsg] = useState<{ type: "success" | "error"; text: string } | null>(null);
@@ -82,7 +82,7 @@ export function AddMemberForm({ ranks = DEFAULT_RANKS }: { ranks?: string[] }) {
         setMsg({ type: "success", text: `${role} added successfully!` });
         setSurname("");
         setEmail("");
-        setPassword("admin");
+        setPassword("29sqn1941");
         setRole("Adjutant");
         setTimeout(() => setMsg(null), 3000);
       } else {
@@ -213,7 +213,7 @@ export function SetAdjutantPasswordButton({
   memberName: string;
 }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [password, setPassword] = useState("admin");
+  const [password, setPassword] = useState("29sqn1941");
   const [isPending, startTransition] = useTransition();
   const [msg, setMsg] = useState<{ type: "success" | "error"; text: string } | null>(null);
 

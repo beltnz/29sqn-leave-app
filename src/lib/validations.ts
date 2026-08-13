@@ -189,7 +189,7 @@ export const CreateMemberSchema = z.object({
     .max(100, "Email must be 100 characters or less")
     .toLowerCase()
     .trim(),
-  password: z.string().min(4, "Password must be at least 4 characters").optional().default("admin"),
+  password: z.string().min(4, "Password must be at least 4 characters").optional().default("29sqn1941"),
   isStaff: z.boolean().optional().default(false),
   isAdjutant: z.boolean().optional().default(false),
   isManager: z.boolean().optional().default(false),

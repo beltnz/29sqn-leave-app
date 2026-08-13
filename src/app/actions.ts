@@ -402,7 +402,7 @@ export async function createMember(rawData: {
         rank,
         surname,
         email: email.toLowerCase(),
-        password: hashPassword(password || "admin"),
+        password: hashPassword(password || "29sqn1941"),
         isStaff: isStaff ?? false,
         isAdjutant: isAdjutant || isManager,
         isManager: isAdjutant || isManager,
