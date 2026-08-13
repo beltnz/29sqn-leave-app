@@ -84,7 +84,13 @@ web_modules/
 .parcel-cache
 
 # Next.js build output
-.next
+# Allow .next folder, but ignore dev build cache
+.next/*
+!.next/standalone
+!.next/static
+!.next/server
+!.next/BUILD_ID
+!.next/package.json
 out
 
 # Nuxt.js build / generate output
