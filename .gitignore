@@ -91,6 +91,7 @@ web_modules/
 !.next/server
 !.next/BUILD_ID
 !.next/package.json
+!.next/*.json
 out
 
 # Nuxt.js build / generate output
