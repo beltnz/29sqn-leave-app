@@ -1,0 +1,89 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+generator fieldEncryptionMigrations {
+  provider = "prisma-field-encryption"
+  output   = "./field-encryption-migrations"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Member {
+  id         Int      @id @default(autoincrement())
+  rank       String   @default("FLTLT")
+  surname    String
+  email      String   @unique
+  /// @encrypted
+  password   String   @default("admin")
+  isStaff    Boolean  @default(false)
+  isAdjutant Boolean  @default(true)
+  isManager  Boolean  @default(true)
+  isAdmin    Boolean  @default(false)
+  isActive   Boolean  @default(true)
+  emailEnabled Boolean @default(false)
+  createdAt  DateTime @default(now())
+}
+
+model LeaveRequest {
+  id        Int      @id @default(autoincrement())
+  rank      String   @default("CDT")
+  surname   String
+  startDate DateTime
+  endDate   DateTime
+  /// @encrypted
+  reason    String
+  status    String   @default("PENDING")
+  createdAt DateTime @default(now())
+}
+
+model SecurityIp {
+  id        Int       @id @default(autoincrement())
+  ip        String    @unique
+  type      String    // "WHITELIST" | "BLACKLIST"
+  source    String    @default("MANUAL") // "AUTO_ADMIN" | "MANUAL"
+  /// @encrypted
+  reason    String?
+  createdAt DateTime  @default(now())
+  expiresAt DateTime?
+}
+
+model SecurityRule {
+  id        Int      @id @default(autoincrement())
+  type      String
+  /// @encrypted
+  value     String
+  createdAt DateTime @default(now())
+}
+
+model AuditLog {
+  id        Int      @id @default(autoincrement())
+  action    String
+  actor     String
+  details   String
+  ip        String   @default("unknown")
+  createdAt DateTime @default(now())
+}
+
+model SystemSetting {
+  key       String   @id
+  value     String
+  updatedAt DateTime @updatedAt
+}
+
+model TermYear {
+  id        Int      @id @default(autoincrement())
+  year      Int      @unique
+  t1Start   String
+  t1End     String
+  t2Start   String
+  t2End     String
+  t3Start   String
+  t3End     String
+  t4Start   String
+  t4End     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

@@ -1,0 +1,7 @@
+# Project Constraints & Rules
+
+- Stack: Next.js (App Router), TypeScript, Tailwind CSS, SQLite, Prisma ORM.
+- Philosophy: Lean, simple, lightweight. Avoid unnecessary third-party packages.
+- Security: All API routes must validate input types strictly (using Zod) and check rate limits.
+- Database: SQLite file-based database stored locally.
+- Target Environment: Self-hosted Node.js server behind Apache reverse proxy.
