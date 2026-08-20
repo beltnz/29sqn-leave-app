@@ -85,14 +85,8 @@ web_modules/
 
 # Next.js build output
 # Allow .next folder, but ignore dev build cache
-.next/*
-!.next/standalone
-!.next/static
-!.next/server
-!.next/BUILD_ID
-!.next/package.json
-!.next/*.json
-out
+.next/
+out/
 
 # Nuxt.js build / generate output
 .nuxt
@@ -141,3 +135,9 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Local SQLite Databases
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
